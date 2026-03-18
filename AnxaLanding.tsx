@@ -1,7 +1,7 @@
 import React, { useEffect, useState, useCallback } from "react";
 import "./styles.css";
 import AnxaLogo from "./Anxa-assist.png";
-import HeroBg from "./Bg.png";
+import HeroBg from "./bg.png";
 import SecondSectionBg from "./second section.png";
 
 /* ── Simulation flow icons ── */
