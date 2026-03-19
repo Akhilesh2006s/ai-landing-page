@@ -119,7 +119,7 @@ const AnxaLanding: React.FC = () => {
             </div>
             <div className="nav-right">
               <span className="nav-badge">Coming Soon</span>
-              <a href="#early-access" className="nav-cta">Request Early Access</a>
+              <a href="/early-access" className="nav-cta">Request Early Access</a>
             </div>
           </div>
         </div>
@@ -138,8 +138,8 @@ const AnxaLanding: React.FC = () => {
               with the right context, controls, and accountability.
             </p>
             <div className="hero-ctas">
-              <a href="#early-access" className="btn btn--primary">Request Early Access</a>
-              <a href="#contact" className="btn btn--ghost">Talk to Us</a>
+              <a href="/early-access" className="btn btn--primary">Request Early Access</a>
+              <a href="/talk-to-us" className="btn btn--ghost">Talk to Us</a>
             </div>
           </div>
 
@@ -286,8 +286,8 @@ const AnxaLanding: React.FC = () => {
               <p className="footer-kicker">Get started today.</p>
               <h2 className="footer-heading">See how ANXA turns AI into governed execution.</h2>
               <div className="footer-ctas">
-                <a href="#early-access" className="btn btn--primary-light">Request Early Access</a>
-                <a href="#contact" className="btn btn--outline-light btn--outline-dark">Talk to Us</a>
+                <a href="/early-access" className="btn btn--primary-light">Request Early Access</a>
+                <a href="/talk-to-us" className="btn btn--outline-light btn--outline-dark">Talk to Us</a>
               </div>
             </div>
           </div>

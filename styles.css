@@ -973,3 +973,221 @@ a { text-decoration: none; color: inherit; }
   .example-card { padding: 24px 22px 22px; }
   .example-q { font-size: 18px; }
 }
+
+/* ================================================================
+   Early Access Modal
+   ================================================================ */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(15, 23, 42, 0.58);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  z-index: 50;
+}
+
+.modal {
+  width: 100%;
+  max-width: 660px;
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.78);
+  backdrop-filter: blur(26px) saturate(155%) contrast(1.02);
+  -webkit-backdrop-filter: blur(26px) saturate(155%) contrast(1.02);
+  border: 1px solid rgba(255, 255, 255, 0.65);
+  box-shadow:
+    0 40px 140px rgba(0, 0, 0, 0.30),
+    0 0 0 1px rgba(255, 255, 255, 0.35);
+  overflow: hidden;
+}
+
+.modal-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 20px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+  background: rgba(255, 255, 255, 0.45);
+}
+
+.modal-title {
+  font-size: 18px;
+  font-weight: 650;
+  color: var(--dark);
+}
+
+.modal-close {
+  width: 42px;
+  height: 42px;
+  border-radius: 999px;
+  border: 1px solid rgba(0, 0, 0, 0.10);
+  background: rgba(255, 255, 255, 0.72);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  line-height: 1;
+  transition: transform 200ms ease, box-shadow 200ms ease, background 200ms ease;
+}
+
+.modal-close:hover:not(:disabled) {
+  transform: translateY(-1px);
+  box-shadow: 0 18px 50px rgba(0, 0, 0, 0.18);
+  background: rgba(255, 255, 255, 0.9);
+}
+
+.modal-body {
+  padding: 18px 20px 22px;
+}
+
+.modal-form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.modal-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.modal-label {
+  display: block;
+  font-size: 12px;
+  font-weight: 650;
+  color: var(--dark-soft);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 6px;
+}
+
+.modal-input,
+.modal-textarea {
+  width: 100%;
+  border-radius: 14px;
+  border: 1px solid rgba(0, 0, 0, 0.10);
+  background: rgba(255, 255, 255, 0.65);
+  padding: 12px 14px;
+  font-size: 14px;
+  outline: none;
+  color: var(--dark);
+}
+
+.modal-textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.modal-input:focus,
+.modal-textarea:focus {
+  border-color: rgba(59, 130, 246, 0.55);
+  box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.15);
+}
+
+.modal-error {
+  color: #b91c1c;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.modal-actions {
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end;
+  align-items: center;
+  padding-top: 4px;
+  flex-wrap: wrap;
+}
+
+.modal-note {
+  font-size: 13px;
+  color: var(--muted);
+  line-height: 1.5;
+  margin-top: -4px;
+}
+
+@media (max-width: 640px) {
+  .modal-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ================================================================
+   Early Access Page Layout
+   ================================================================ */
+.ea-page {
+  background: var(--cream);
+}
+
+.ea-hero {
+  padding: 46px 24px 90px;
+}
+
+.ea-card {
+  position: relative;
+  width: 100%;
+  max-width: 1120px;
+  margin: 0 auto;
+  border-radius: 32px;
+  overflow: hidden;
+  min-height: 460px;
+  border: 1px solid rgba(255, 255, 255, 0.55);
+  box-shadow: 0 40px 140px rgba(0, 0, 0, 0.18);
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.ea-card-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: scale(1.03);
+  filter: saturate(1.02) contrast(0.98);
+}
+
+.ea-card-content {
+  position: relative;
+  z-index: 1;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 36px 18px;
+}
+
+.ea-panel {
+  max-width: 690px;
+}
+
+.ea-success {
+  padding: 14px 4px 6px;
+}
+
+.ea-success-title {
+  font-size: 24px;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  color: var(--dark);
+  margin-bottom: 12px;
+}
+
+.ea-success-text {
+  font-size: 16px;
+  color: var(--muted);
+  margin-bottom: 20px;
+}
+
+@media (max-width: 768px) {
+  .ea-hero {
+    padding: 28px 16px 70px;
+  }
+
+  .ea-card {
+    min-height: 520px;
+    border-radius: 26px;
+  }
+}
