@@ -250,6 +250,27 @@ const AnxaLanding: React.FC = () => {
         </div>
       </section>
 
+      {/* ── AI SIGNAL TRANSITION BAND ── */}
+      <section className="agent-band" aria-hidden="true">
+        <div className="agent-band-inner">
+          <div className="agent-band-rail">
+            <span className="agent-band-node">Prompt</span>
+            <span className="agent-band-link" />
+            <span className="agent-band-node">Context</span>
+            <span className="agent-band-link" />
+            <span className="agent-band-node">Decision</span>
+            <span className="agent-band-link" />
+            <span className="agent-band-node">Execution</span>
+            <span className="agent-band-signal" />
+          </div>
+          <div className="agent-band-kpis">
+            <span className="agent-band-kpi">Policy Aware</span>
+            <span className="agent-band-kpi">Cross-System Agents</span>
+            <span className="agent-band-kpi">Audit Trail</span>
+          </div>
+        </div>
+      </section>
+
       {/* ── SECTION – Shift & Platform side-by-side ── */}
       <section className="sect sect--white sect--split">
         <div className="sect-split-inner">
